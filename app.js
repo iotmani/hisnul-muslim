@@ -8,7 +8,8 @@ Ext.application({
 
     views: ['Main'],
     models: ['Dua', 'Chapter'],
-    stores: [/*'DuasStore',*/ 'ChaptersStore'],
+    //TODO remove those not waned to be global
+    stores: ['DuasStore', 'ChaptersStore'],
 
     icon: {
         '57': 'resources/icons/Icon.png',

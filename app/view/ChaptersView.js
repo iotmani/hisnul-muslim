@@ -11,18 +11,8 @@ Ext.define('HisnulMuslim.view.ChaptersView', {
             xtype: 'list',
             itemTpl: '<div><strong>{title}</strong></div>',
 
-            //TODO  model, store: 'HisnulMuslim.store.ChaptersStore'
             model: 'HisnulMuslim.model.Chapter',
-            data:[
-                {
-                    id: '1',
-                    title: 'When waking up'
-                },
-                {
-                    id: '5',
-                    title: 'When wearing a garment'
-                }
-            ]
+            store: {xtype: 'chaptersstore'},
 
             //TODO tap on item, pushes new list of duas under given chapter as per association
         }]

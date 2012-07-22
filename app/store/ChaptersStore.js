@@ -3,9 +3,10 @@ Ext.define('HisnulMuslim.store.ChaptersStore', {
     requires:[
         'HisnulMuslim.model.Chapter'
     ],
+    xtype: 'chaptersstore',
     config: {
         model: 'HisnulMuslim.model.Chapter',
-        sorters: 'title',
+        sorters: 'id',
         data:[
             {
                 id: '1',
