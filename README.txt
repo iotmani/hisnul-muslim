@@ -1,0 +1,1 @@
+Please don't forget to add sencha touch CSS and JavaScript files to the app folder. Put sencha-touch.css inside resources/css/ and put sencha-touch-all-debug.js inside resources/libs/
