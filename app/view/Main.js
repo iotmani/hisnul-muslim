@@ -33,10 +33,37 @@ Ext.define("HisnulMuslim.view.Main", {
                     },
                     {
                         xtype: 'list',
-                        store: {xtype: 'duasstore'},
+                        store: 'DuasStore',
                         grouped: 'true',
                         itemTpl: '<div align="right"><strong>{arabic}</strong></div>'
-                    }                
+                    }
+                ]
+            },
+            {
+                title: 'About',
+                iconCls: 'user',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        title: 'About'
+                    },
+                    {
+                        xtype: 'panel',
+                        //TODO scrollable: true,
+                        html: [
+                                '<p>Created by Islam Otmani',
+                                ,
+                                "The source-code available at:",
+                                'https://github.com/iotmani/hisnul-muslim',
+                                ,
+                                "Please make Du'a if you found this app userful",
+                                ,
+                                'Resources used to make this app were obtained from the following sources:',
+                                'http://aa.trinimuslims.com/f20/hisn-al-muslim-text-translation-transliterations-audio-5390/',
+                                'http://www.hisnulmuslim.com/</p>'
+                        ].join('<br />')
+                    }
                 ]
             }
         ]

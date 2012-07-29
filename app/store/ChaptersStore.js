@@ -1,9 +1,11 @@
 Ext.define('HisnulMuslim.store.ChaptersStore', {
     extend: 'Ext.data.Store',
+    xtype: 'chaptersstore',
+
     requires:[
         'HisnulMuslim.model.Chapter'
     ],
-    xtype: 'chaptersstore',
+
     config: {
         model: 'HisnulMuslim.model.Chapter',
         sorters: 'id',

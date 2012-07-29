@@ -22,7 +22,7 @@ Release
 --------
 *   0.8:
     - Add full search of meaning/chapters
-      * Let user select including arabic/transliteration, though a bit pointless for most users
+      - Let user select including arabic/transliteration, though a bit pointless for most users
     - Move store data to json file
     - remove global parts
     - Add better load screen, splash screen instead?
@@ -37,8 +37,8 @@ Release
         - Add a ChapterContent view or adjust duasList
         - Stuck at getting controller to grab taps
             Good sencha examples, e.g. Contacts
-    - Add About page instead of Search
-    + separate list view files, 
+    + Add About page instead of Search < ---- done below so far
+    + separate list view files,
     + navview, 
     + use separate model file
     + separate store file
@@ -49,8 +49,9 @@ Todo
 -----
 -   clicking on title pushes duas view for that title
 -   Remove tabs panel for now?
-      Views
-          main tabs panel {
+      - Views
+
+            main tabs panel {
               chapters tab
                   (no titlebar)
                   nav.view:
@@ -59,9 +60,10 @@ Todo
               bookmarks tab (separate file)
               search tab (separate file)
               About tab
-          }
-      Controller
-          Main (only one can control all)
+            }
+
+      - Controller
+        - Main (only one can control all)
 -   How to add json chapters file with duas within? as object?
 
 View
@@ -88,3 +90,4 @@ Note from Sencha
 =================
 Please don't forget to add sencha touch CSS and JavaScript files to the app folder.
 Put sencha-touch.css inside resources/css/ and put sencha-touch-all-debug.js inside resources/libs/
+
