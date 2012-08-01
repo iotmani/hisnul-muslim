@@ -20,6 +20,10 @@ Plan
 
 Release
 --------
+*   0.9:
+    - Bookmarks, local storage
+    - Filter (checkboxes) for displaying what info per Dua: Arabic, transliteration, sound, english
+      - Persistent in local storage
 *   0.8:
     - Add full search of meaning/chapters
       - Let user select including arabic/transliteration, though a bit pointless for most users
@@ -33,6 +37,7 @@ Release
     - Native packaging
     - Publish on Android Market, ask Mohammed to publish on AppStore
 *   0.6:  < -------- You are here
+    - Consider splitting json content with new lines where necessary, replace with <br /> when used
     - Add pushing navigationview to view duas attached
         - Add a ChapterContent view or adjust duasList
         - Stuck at getting controller to grab taps
@@ -57,6 +62,7 @@ Todo
                   nav.view:
                       List chapters (separate file)
                       > List duas in selected chapter (separate file)
+                      Use Carousel to flick through?
               bookmarks tab (separate file)
               search tab (separate file)
               About tab
