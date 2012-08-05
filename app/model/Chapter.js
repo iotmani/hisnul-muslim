@@ -3,5 +3,5 @@ Ext.define('HisnulMuslim.model.Chapter', {
     config:{
         fields: ['id', 'title'],
         hasMany: 'Dua'
-    }
+   }
 });

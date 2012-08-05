@@ -6,10 +6,10 @@ Ext.application({
         'Ext.data.Store'
     ],
 
-    views: ['Main'],
-    models: ['Dua', 'Chapter'],
     //TODO remove those not waned to be global
     stores: ['DuasStore', 'ChaptersStore'],
+    controllers: ['ChaptersController'],
+    views: ['Main'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
