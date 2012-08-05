@@ -20,23 +20,23 @@ Plan
 
 Release
 --------
-*   0.9:
+*   0.9 (polishing features):
     - Bookmarks, local storage
     - Filter (checkboxes) for displaying what info per Dua: Arabic, transliteration, sound, english
       - Persistent in local storage
-*   0.8:
+*   0.8 (improve performance and searching):
     - Add full search of meaning/chapters
       - Let user select including arabic/transliteration, though a bit pointless for most users
     - Move store data to json file
     - remove global parts
     - Add better load screen, splash screen instead?
     - Add Themes of duaas for cross-ref
-*   0.7:
+*   0.7 (get it published):
     - Add full json content and possibly media too
     - Add chapter search on navigation bar
     - Native packaging
     - Publish on Android Market, ask Mohammed to publish on AppStore
-*   0.6:  < -------- You are here
+*   0.6 (finish main functionality):  < -------- You are here
     - Consider splitting json content with new lines where necessary, replace with <br /> when used
     - Add pushing navigationview to view duas attached
         - Add a ChapterContent view or adjust duasList
