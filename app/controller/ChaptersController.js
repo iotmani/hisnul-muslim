@@ -2,11 +2,12 @@ Ext.define('HisnulMuslim.controller.ChaptersController', {
     extend: 'Ext.app.Controller',
 
     requires: [
+        'HisnulMuslim.model.Dua',
+        'HisnulMuslim.model.Chapter',
         'HisnulMuslim.view.ChaptersList'
     ],
 
     config: {
-
         control: {
             'chapterslist': {
                 itemtap: 'onViewChapter'
@@ -16,13 +17,12 @@ Ext.define('HisnulMuslim.controller.ChaptersController', {
     },
 
     onViewChapter: function(view, index, target, record) {
-        // Push to ChaptersPanel a newly instantiated chapterContent panel with duaas under given chapter id
-        console.log("onViewChapter(" + index + "-" + record.get("title") + ") called in controller");
-        console.debug(record.get('duas'));
-        console.debug(record);
-        //record.duas().each(function(dua) {
-        //    console.debug("Dua: " + dua);
-        //});
+        // Push to ChaptersPanel a newly instantiated ChapterContent panel with duaas under given chapter id
+        console.log("onViewChapter(" + index + " " + record.get("title") + ") called in controller");
+
+        record.duas().each(function(dua){
+            console.debug("Dua meaning: " + dua.get('meaning'));
+        });
 
         view.getParent().push({
             title: record.get('title'),
@@ -31,5 +31,7 @@ Ext.define('HisnulMuslim.controller.ChaptersController', {
             styleHtmlContent: true,
             html: '<h1>ha</h1>'
         });        
+
     }
+
 });

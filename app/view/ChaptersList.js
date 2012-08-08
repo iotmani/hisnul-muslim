@@ -10,8 +10,7 @@ Ext.define('HisnulMuslim.view.ChaptersList', {
         id: 'ChaptersListID',
         title: 'Select Chapter',
         itemTpl: '{id} {title}',
-        store: 'ChaptersStore',
-
-    },
+        store: 'ChaptersStore'
+    }
 
 });

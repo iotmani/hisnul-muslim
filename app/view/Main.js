@@ -21,14 +21,6 @@ Ext.define("HisnulMuslim.view.Main", {
                     xtype: 'navigationview',
                     id: 'ChaptersNavigationView',
                     items: {xtype: 'chapterslist'},
-                    onItemDisclosure: function(record, item, index, e) {
-                        console.debug("list tapped disclosure navview");
-                        //TODO move to navigationview:
-                        //record.push({
-                        //    title: 'Second',
-                        //    html: '<h1>ha</h1>'
-                        //});
-                    }
                 }
             },
             {
@@ -54,6 +46,7 @@ Ext.define("HisnulMuslim.view.Main", {
                 ]
             },
             {
+                // About screen
                 xtype: 'about'
             }
         ]
