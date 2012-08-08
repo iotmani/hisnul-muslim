@@ -37,11 +37,13 @@ Release
     - Native packaging
     - Publish on Android Market, ask Mohammed to publish on AppStore
 *   0.6 (finish main functionality):  < -------- You are here
-    - Consider splitting json content with new lines where necessary, replace with <br /> when used
-    - Add pushing navigationview to view duas attached
-        - Add a ChapterContent view or adjust duasList
-        - Stuck at getting controller to grab taps
-            Good sencha examples, e.g. Contacts
+    - Format selected chapter's duas in a list
+        - Consider splitting json content with new lines where necessary, replace with <br /> when used
+    + Add a ChapterContent view or adjust duasList
+        + Stuck at not being able to access associations despite being in data structure
+          + Attempt to bring model and code from working dummySencha version
+          + Bring it to app.js: launch()
+    + Add pushing navigationview to view duas attached
     + Add About page instead of Search < ---- done below so far
     + separate list view files,
     + navview, 
