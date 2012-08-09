@@ -51,13 +51,6 @@ Ext.define('HisnulMuslim.store.ChaptersStore', {
                             "Wa inna min ahli-l-kitâbi la-man yu'minu bi-l-lâhi wa mâ unzila ilaykum wa mâ unzila ilayhim, khâshicîna li-l-lâhi, lâ yashtarûna bi-âyâti l-lâhi thamanan qalîlan. Uwlâ-ika lahum ajruhum cinda rabbihim, inna l-l^haa sarîc-l-hisâb.\r\n" +
                             "Yâ ayyuhâ l-ladhîna âmanû-sbirû wa sâbirû wa râbitû wa t-taqû l-lâha lacallakum tuflihûn.",
                         audio: 'audio/4.mp3'
-                    },
-                    {
-                        id: '5', chapter: 'When wearing a garment', theme: 'Cleanliness',
-                        arabic: 'الحمدُ للهِ الّذي كَساني هذا (الثّوب) وَرَزَقَنيه مِنْ غَـيـْرِ حَولٍ مِنّي وَلا قـوّة', 
-                        meaning: 'All Praise is for Allah who has clothed me with this garment and provided it for me, with no power nor might from myself.',
-                        transliteration: 'Al hamdu li-l-lâhi l-ladhî kasânî hadhâ th-thawbawa razaqanîhi min ghayri hawlin minnî wa lâ quwwatin.',
-                        audio: 'audio/5.mp3'
                     }
                 ] 
             },
@@ -67,7 +60,7 @@ Ext.define('HisnulMuslim.store.ChaptersStore', {
                 duas: [
                     {
                         id: '5', chapter: 'When wearing a garment', theme: 'Cleanliness',
-                        arabic: '¿¿¿¿¿ ¿¿¿ ¿¿¿¿ ¿¿¿¿¿ ¿¿¿ (¿¿¿¿¿) ¿¿¿¿¿¿¿ ¿¿ ¿¿¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿¿', //TODO
+                        arabic: 'الحمدُ للهِ الّذي كَساني هذا (الثّوب) وَرَزَقَنيه مِنْ غَـيـْرِ حَولٍ مِنّي وَلا قـوّة', 
                         meaning: 'All Praise is for Allah who has clothed me with this garment and provided it for me, with no power nor might from myself.',
                         transliteration: 'Al hamdu li-l-lâhi l-ladhî kasânî hadhâ th-thawbawa razaqanîhi min ghayri hawlin minnî wa lâ quwwatin.',
                         audio: 'audio/5.mp3'

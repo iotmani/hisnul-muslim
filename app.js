@@ -7,7 +7,7 @@ Ext.application({
     ],
 
     //TODO remove those not waned to be global
-    stores: ['DuasStore', 'ChaptersStore'],
+    stores: ['ChaptersStore'],
     controllers: ['ChaptersController'],
     views: ['Main'],
 

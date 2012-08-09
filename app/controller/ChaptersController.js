@@ -4,7 +4,8 @@ Ext.define('HisnulMuslim.controller.ChaptersController', {
     requires: [
         'HisnulMuslim.model.Dua',
         'HisnulMuslim.model.Chapter',
-        'HisnulMuslim.view.ChaptersList'
+        'HisnulMuslim.view.ChaptersList',
+        'HisnulMuslim.view.DuasList'
     ],
 
     config: {
@@ -20,17 +21,18 @@ Ext.define('HisnulMuslim.controller.ChaptersController', {
         // Push to ChaptersPanel a newly instantiated ChapterContent panel with duaas under given chapter id
         console.log("onViewChapter(" + index + " " + record.get("title") + ") called in controller");
 
-        record.duas().each(function(dua){
-            console.debug("Dua meaning: " + dua.get('meaning'));
+        record.duas().each(function(dua) {
+            console.debug("Loaded dua id: " + dua.get('id'));
         });
 
-        view.getParent().push({
-            title: record.get('title'),
+        //TODO should only call setChapter(record) and not know rest about title here
+        //      duasView.setChapter(record);
+        this.view = Ext.create('HisnulMuslim.view.DuasList', {
+            chapter: record,
+            title: record.get('title')
+        });
 
-            //TODO list all items in ChaptersModel, filtered by record id or record title
-            styleHtmlContent: true,
-            html: '<h1>ha</h1>'
-        });        
+        view.getParent().push(this.view);
 
     }
 

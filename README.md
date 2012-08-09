@@ -22,24 +22,36 @@ Release
 --------
 *   0.9 (polishing features):
     - Bookmarks, local storage
-    - Filter (checkboxes) for displaying what info per Dua: Arabic, transliteration, sound, english
-      - Persistent in local storage
+    - Startup screen while loading HisnulMuslim
 *   0.8 (improve performance and searching):
+    - Settings tab: Filter (checkboxes) for displaying what info per Dua: Arabic, transliteration, sound, english
+      - Persistent in local storage
     - Add full search of meaning/chapters
+      - Use following guidelines:
+            //    //TODO make this search, or include search form within chapters view
+            //    title: 'Duas',
+            //    iconCls: 'search',
+            //    layout: 'fit',
+            //    //TODO make this navigationview also? search takes to found items, back to search
+
       - Let user select including arabic/transliteration, though a bit pointless for most users
+    - create duas list if not already done (via another tap), set data, show it if not already shown (see kiva controller)
     - Move store data to json file
     - remove global parts
     - Add better load screen, splash screen instead?
     - Add Themes of duaas for cross-ref
 *   0.7 (get it published):
     - Add full json content and possibly media too
+    - Consider splitting json content with new lines where necessary, replace with <br /> when used
     - Add chapter search on navigation bar
     - Native packaging
     - Publish on Android Market, ask Mohammed to publish on AppStore
 *   0.6 (finish main functionality):  < -------- You are here
-    - Format selected chapter's duas in a list
-        - Consider splitting json content with new lines where necessary, replace with <br /> when used
+    + Remove Search tab
+    + Format selected chapter's duas in a list
     + Add a ChapterContent view or adjust duasList
+        + Instantiate duas list view in controller (and add to viewport: Ext.Viewport.add(panel);) and push
+            + see kiva/app/controller/Loans.js +50
         + Stuck at not being able to access associations despite being in data structure
           + Attempt to bring model and code from working dummySencha version
           + Bring it to app.js: launch()
