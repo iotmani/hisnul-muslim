@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Hisnul-muslim : Based on Hisnul Muslim duaas book" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Hisnul-muslim</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/iotmani/hisnul-muslim">View on GitHub</a>
+
+          <h1 id="project_title">Hisnul-muslim</h1>
+          <h2 id="project_tagline">Based on Hisnul Muslim duaas book</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/iotmani/hisnul-muslim/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/iotmani/hisnul-muslim/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Hisnul-Muslim</h1>
+
+<p>Mobile application based on Hisnul Muslim duaas book.</p>
+
+<p>Built using Sencha Touch supports iOS/Android/Chrome/Safari.</p>
+
+<h2>Instructions</h2>
+
+<p>If you have a web-server, place this project inside and open index.html</p>
+
+<p>Alternatively, make sure all other instances of Chrome are closed before.
+Open in Chrome (or safari, i.e. webkit only) with the following parameters:
+--disable-web-security --allow-file-access-from-files
+Open the index.html page</p>
+
+<hr><h1>Plan</h1>
+
+<h2>Release</h2>
+
+<ul>
+<li>  0.9 (polishing features):
+
+<ul>
+<li>Bookmarks, local storage</li>
+<li>Startup screen while loading HisnulMuslim</li>
+</ul>
+</li>
+<li>
+<p>0.8 (improve performance and searching):</p>
+
+<ul>
+<li>Settings tab: Filter (checkboxes) for displaying what info per Dua: Arabic, transliteration, sound, english
+
+<ul>
+<li>Persistent in local storage</li>
+</ul>
+</li>
+<li>Add full search of meaning/chapters
+
+<ul>
+<li>Use following guidelines:
+//    //TODO make this search, or include search form within chapters view
+//    title: 'Duas',
+//    iconCls: 'search',
+//    layout: 'fit',
+//    //TODO make this navigationview also? search takes to found items, back to search</li>
+<li>Let user select including arabic/transliteration, though a bit pointless for most users</li>
+</ul>
+</li>
+<li>create duas list if not already done (via another tap), set data, show it if not already shown (see kiva controller)</li>
+<li>Move store data to json file</li>
+<li>remove global parts</li>
+<li>Add better load screen, splash screen instead?</li>
+<li>Add Themes of duaas for cross-ref</li>
+</ul>
+</li>
+<li>
+<p>0.7 (get it published):</p>
+
+<ul>
+<li>Add full json content and possibly media too</li>
+<li>Consider splitting json content with new lines where necessary, replace with <br> when used</li>
+<li>Add chapter search on navigation bar</li>
+<li>Native packaging</li>
+<li>Publish on Android Market, ask Mohammed to publish on AppStore</li>
+</ul>
+</li>
+<li>
+<p>0.6 (finish main functionality):  &lt; -------- You are here</p>
+
+<ul>
+<li>Remove Search tab</li>
+<li>Format selected chapter's duas in a list</li>
+<li>Add a ChapterContent view or adjust duasList
+
+<ul>
+<li>Instantiate duas list view in controller (and add to viewport: Ext.Viewport.add(panel);) and push
+
+<ul>
+<li>see kiva/app/controller/Loans.js +50</li>
+</ul>
+</li>
+<li>Stuck at not being able to access associations despite being in data structure
+
+<ul>
+<li>Attempt to bring model and code from working dummySencha version</li>
+<li>Bring it to app.js: launch()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add pushing navigationview to view duas attached</li>
+<li>Add About page instead of Search &lt; ---- done below so far</li>
+<li>separate list view files,</li>
+<li>navview, </li>
+<li>use separate model file</li>
+<li>separate store file</li>
+<li>move to GIT, </li>
+</ul>
+</li>
+<li><p>0.5 has working duas list display after adding 'fit' to tab item layout</p></li>
+</ul><h2>Todo</h2>
+
+<ul>
+<li>  clicking on title pushes duas view for that title</li>
+<li>
+<p>Remove tabs panel for now?</p>
+
+<ul>
+<li>
+<p>Views</p>
+
+<pre><code>main tabs panel {
+  chapters tab
+      (no titlebar)
+      nav.view:
+          List chapters (separate file)
+          &gt; List duas in selected chapter (separate file)
+          Use Carousel to flick through?
+  bookmarks tab (separate file)
+  search tab (separate file)
+  About tab
+}
+</code></pre>
+</li>
+<li>
+<p>Controller</p>
+
+<ul>
+<li>Main (only one can control all)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How to add json chapters file with duas within? as object?</p></li>
+</ul><h2>View</h2>
+
+<ul>
+<li>  Home tab: list of chapters, then html of all duas in it once one is picked</li>
+<li>  Themes tab: tags, a dua should support more than one tag so many-to-many really</li>
+<li>  Search, select checkboxes of what Dua fields to search</li>
+<li>  Skin?</li>
+</ul><h2>Resources</h2>
+
+<ul>
+<li><p>Fiddle link: <a href="http://www.senchafiddle.com/#VEPum">http://www.senchafiddle.com/#VEPum</a></p></li>
+<li><p>audio obtained from swf executable found by Tehmur, high quality and slow pronounciation</p></li>
+<li><p>All text from: <a href="http://www.hisnulmuslim.com/index-page-liste-lang-en.html">http://www.hisnulmuslim.com/index-page-liste-lang-en.html</a></p></li>
+<li><ul>
+<li>resource of hisnulmuslim.com has missing pages, so must get/type from elsewhere e.g. 1st link</li>
+</ul></li>
+<li><p>Themes from: <a href="http://aa.trinimuslims.com/f20/hisn-al-muslim-text-translation-transliterations-audio-5390/">http://aa.trinimuslims.com/f20/hisn-al-muslim-text-translation-transliterations-audio-5390/</a></p></li>
+<li><p>Grouped list kitchen sink: <a href="http://dev.sencha.com/deploy/touch/examples/production/kitchensink/#demo/list">http://dev.sencha.com/deploy/touch/examples/production/kitchensink/#demo/list</a></p></li>
+<li><p>First app guide has list e.g.: <a href="http://docs.sencha.com/touch/2-0/#!/guide/first_app">http://docs.sencha.com/touch/2-0/#!/guide/first_app</a></p></li>
+</ul><h1>Note from Sencha</h1>
+
+<p>Please don't forget to add sencha touch CSS and JavaScript files to the app folder.
+Put sencha-touch.css inside resources/css/ and put sencha-touch-all-debug.js inside resources/libs/</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hisnul-muslim maintained by <a href="https://github.com/iotmani">iotmani</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-34074462-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
