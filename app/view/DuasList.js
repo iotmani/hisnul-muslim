@@ -10,10 +10,9 @@ Ext.define('HisnulMuslim.view.DuasList', {
         chapter: null,
         itemTpl: 
         [
-            '<b>Meaning: </b><br />{meaning}<br />',
-            '<b>Transliteration: </b><br />{transliteration}<br />',
-            '<b>Arabic: </b><br />',
             '<div align="right"><big>{arabic}</big></div>',
+            '{meaning}<br />',
+            '<b>Transliteration: </b><br />{transliteration}'
         ].join('')
     },
 

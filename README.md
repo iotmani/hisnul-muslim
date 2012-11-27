@@ -35,18 +35,21 @@ Release
             //    //TODO make this navigationview also? search takes to found items, back to search
 
       - Let user select including arabic/transliteration, though a bit pointless for most users
-    - create duas list if not already done (via another tap), set data, show it if not already shown (see kiva controller)
+    - Experiment with keeping chapters list and chapters content in separate jSON files to speed up navigation. Test on iPod or Chrome Profiler
+    - create duas list view if not already done (via another tap), set data, show it if not already shown (see kiva controller)
     - Move store data to json file
     - remove global parts
-    - Add better load screen, splash screen instead?
+    - Add better load screen, splash screen instead? splash and then loading screen?
     - Add Themes of duaas for cross-ref
-*   0.7 (get it published):
+*   0.7 (get it published): < -------- You are here
     - Add full json content and possibly media too
+        - Chapter 1 is incomplete, virtues of rememberance
     - Consider splitting json content with new lines where necessary, replace with <br /> when used
-    - Add chapter search on navigation bar
-    - Native packaging
+    - Add chapter name filter above list, must scroll up to find it
+    - Native packaging, do on windows
+    - Icon
     - Publish on Android Market, ask Mohammed to publish on AppStore
-*   0.6 (finish main functionality):  < -------- You are here
+*   0.6 (finish main functionality):   < ---- done so far and below
     + Remove Search tab
     + Format selected chapter's duas in a list
     + Add a ChapterContent view or adjust duasList
@@ -56,7 +59,7 @@ Release
           + Attempt to bring model and code from working dummySencha version
           + Bring it to app.js: launch()
     + Add pushing navigationview to view duas attached
-    + Add About page instead of Search < ---- done below so far
+    + Add About page instead of Search
     + separate list view files,
     + navview, 
     + use separate model file
@@ -66,32 +69,48 @@ Release
 
 Todo
 -----
--   clicking on title pushes duas view for that title
--   Remove tabs panel for now?
-      - Views
+  - Getting error when packaging the apk:
+    -> Must use OSX or Windows for packaging due to bug in Sencha.
+    > ~/Dropbox/Projects/Hisnul/hisnul-muslim/sdk$ sencha package ../packagerModified.json 
+    [ERROR] The current working directory (/home/compass/Dropbox/Projects/Hisnul/hisnul-muslim/sdk) is not a recognized Sencha SDK or application folder
+    sh: 1: stbuild: not found
+  - Model: separate chapters from duas content apart from their ids?
+    - Search only uses duas
+    - Cross referencing uses duas
+    - However it's quite light to navigate from chapters to them and complex to add one by one for main screen
+  - Views
 
-            main tabs panel {
-              chapters tab
-                  (no titlebar)
-                  nav.view:
-                      List chapters (separate file)
-                      > List duas in selected chapter (separate file)
-                      Use Carousel to flick through?
-              bookmarks tab (separate file)
-              search tab (separate file)
-              About tab
-            }
-
-      - Controller
-        - Main (only one can control all)
--   How to add json chapters file with duas within? as object?
+        main tabs panel {
+          chapters tab
+              nav.view:
+                  filter search on top?
+                  List chapters (separate file)
+                  > List duas in selected chapter (separate file)
+                  Use Carousel to flick through? (in case short chapter)
+          bookmarks tab (separate file)
+          Search tab (separate file)
+          Settings
+          About tab
+        }
 
 View
 ----
--   Home tab: list of chapters, then html of all duas in it once one is picked
--   Themes tab: tags, a dua should support more than one tag so many-to-many really
--   Search, select checkboxes of what Dua fields to search
--   Skin?
+Chapters list:
+    - Use pagination for long list?
+    - Use accordeon if small chapters?
+Chapter content view:
+    - Go to next/prev chapter without returning to list
+    - Arabic on top formatted
+    - Fast scrolling via chapter no
+About
+    - Smaller space between lines in About, title must fit one line and join "Hisnul-Muslim"
+    - Add brief instructions and then git-hub for contributions info, can briefly mention HisnulMuslim.com and TrinidadMuslims as links
+Other
+    - Cross referencing using dua themes
+    + Home tab: list of chapters, then html of all duas in it once one is picked
+    - Themes tab: tags, a dua should support more than one tag so many-to-many really
+    - Search, select radio button of what Dua field to search (meaning, transliteration or arabic; themes?)
+    - UI skin in settings?
 
 Resources
 ---------
