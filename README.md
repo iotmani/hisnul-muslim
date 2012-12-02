@@ -42,9 +42,12 @@ Release
     - Add better load screen, splash screen instead? splash and then loading screen?
     - Add Themes of duaas for cross-ref
 *   0.7 (get it published): < -------- You are here
-    - Add full json content and possibly media too
-        - Chapter 1 is incomplete, virtues of rememberance
-    - Consider splitting json content with new lines where necessary, replace with <br /> when used
+    + Add full json content and possibly media too
+    + Consider splitting json content with new lines where necessary, replace with <br /> when used
+    + Fix "Abou..." shortening of titles (apple.css needed .x-innerhtml padding: 0 from .3em)
+    - Did transliteration just break ?
+    - Add missing information
+    - Better separation between Arabic, English and Transliteration, currently only last has title
     - Add chapter name filter above list, must scroll up to find it
     - Native packaging, do on windows
     - Icon
